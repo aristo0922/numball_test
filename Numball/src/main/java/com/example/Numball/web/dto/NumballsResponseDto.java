@@ -6,15 +6,15 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-
 @Getter
 @NoArgsConstructor
-public class NumballsRequestDto {
+public class NumballsResponseDto {
+
     private String myGuess;
     private String player;
 
     @Builder
-    public NumballsRequestDto(String myGuess, String player){
+    public NumballsResponseDto(String myGuess, String player){
         this.myGuess = myGuess;
         this.player = player;
     }

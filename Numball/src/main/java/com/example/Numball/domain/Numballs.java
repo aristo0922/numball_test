@@ -1,14 +1,11 @@
 package com.example.Numball.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
+
 
 
 @Getter
@@ -27,6 +24,9 @@ public class Numballs extends BaseTimeEntity{
 
     @Column(length=100, nullable = false)
     private String player;
+
+    @ManyToOne
+    private NumballQuestion numballQuestion;
 
 //    @Column(length=100, nullable = false)
 //    private String myAnswer;
